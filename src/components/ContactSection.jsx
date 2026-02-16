@@ -192,7 +192,7 @@ export const ContactSection = () => {
                 </div>
                 <div>
                   <div className="font-semibold text-foreground mb-1">
-                    Graham Stains
+                    Graham Injeti
                   </div>
                   <a
                     href="tel:+916281791230"
@@ -202,21 +202,7 @@ export const ContactSection = () => {
                   </a>
                 </div>
               </div>
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                  <MapPin className="w-5 h-5 text-primary" />
-                </div>
-                <div>
-                  <div className="font-semibold text-foreground mb-1">
-                    Visit Us
-                  </div>
-                  <p className="text-muted-foreground">
-                    1234 Industrial Parkway
-                    <br />
-                    Manufacturing District, CA 90210
-                  </p>
-                </div>
-              </div>
+              <div className="flex items-start gap-4"></div>
             </div>
           </div>
           <Card className="contact-form card-industrial">

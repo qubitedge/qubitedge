@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 
-const PrivacyPolicy = () => {
+const PP = () => {
   const sectionRef = useRef(null);
 
   useEffect(() => {
@@ -83,4 +83,4 @@ const PrivacyPolicy = () => {
   );
 };
 
-export default PrivacyPolicy;
+export default PP;

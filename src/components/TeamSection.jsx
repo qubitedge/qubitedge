@@ -1,10 +1,12 @@
-import { UserCircle } from "lucide-react";
-
 const teamMembers = [
-  { name: "Sam O", role: "Founder" },
-  { name: "Graham", role: "Head of Engineering" },
-  { name: "Steve", role: "Head of Operation" },
-  { name: "Krishna", role: "Head of Technicalities" },
+  { name: "Sam O", role: "Founder", src: "/team/Sam.jpg" },
+  { name: "Graham", role: "Head of Engineering", src: "/team/Graham.jpg" },
+  {
+    name: "Steve Justin",
+    role: "Head of Operation",
+    src: "/team/Steven_2.jpg",
+  },
+  { name: "Krishna", role: "Head of Technicalities", src: "/team/Krishna.jpg" },
 ];
 
 export const TeamSection = () => (
@@ -20,7 +22,11 @@ export const TeamSection = () => (
             key={member.name}
             className="bg-white dark:bg-card p-7 rounded-xl shadow text-center"
           >
-            <UserCircle className="w-14 h-14 mx-auto text-accent mb-4" />
+            <img
+              src={member.src}
+              alt={member.name}
+              className="w-24 h-24 mx-auto mb-4 rounded-full object-cover shadow"
+            />
             <h3 className="font-semibold text-xl text-foreground">
               {member.name}
             </h3>

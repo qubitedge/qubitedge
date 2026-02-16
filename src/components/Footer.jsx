@@ -122,7 +122,7 @@ export const Footer = () => {
           </p>
           <div className="flex gap-6 text-sm text-primary-foreground/60">
             <Link
-              to="/privacy-policy"
+              to="/policy"
               className="hover:text-primary-foreground transition-colors"
             >
               Privacy Policy

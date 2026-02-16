@@ -10,6 +10,7 @@ import { Footer } from "@/components/Footer";
 
 const Index = () => {
   useEffect(() => {
+    window.history.scrollRestoration = "manual";
     window.scrollTo({ top: 0, behavior: "auto" });
   }, []);
 

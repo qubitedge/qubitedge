@@ -88,9 +88,11 @@ export const AboutSection = () => {
               engineering & value engineering, surface finishing & post
               processing.
             </p>
-            <Button className="btn-industrial gap-2">
-              <FileText className="w-4 h-4" />
-              Download Brochure
+            <Button asChild className="btn-industrial gap-2">
+              <a href="/brochure.pdf" download>
+                <FileText className="w-4 h-4" />
+                Download Brochure
+              </a>
             </Button>
           </div>
         </div>

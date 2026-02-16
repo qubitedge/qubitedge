@@ -1,12 +1,20 @@
 const teamMembers = [
-  { name: "Sam O", role: "Founder", src: "/team/Sam.jpg" },
-  { name: "Graham", role: "Head of Engineering", src: "/team/Graham.jpg" },
+  { name: "Sam Oguri", role: "Founder", src: "/team/Sam.jpg" },
   {
-    name: "Steve Justin",
+    name: "Graham Injeti",
+    role: "Head of Engineering",
+    src: "/team/Graham.jpg",
+  },
+  {
+    name: "Steve Oguri",
     role: "Head of Operation",
     src: "/team/Steven_2.jpg",
   },
-  { name: "Krishna", role: "Head of Technicalities", src: "/team/Krishna.jpg" },
+  {
+    name: "Krishna Kaundinya",
+    role: "Head of Technicalities",
+    src: "/team/Krishna.jpg",
+  },
 ];
 
 export const TeamSection = () => (

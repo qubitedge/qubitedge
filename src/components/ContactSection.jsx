@@ -179,10 +179,10 @@ export const ContactSection = () => {
                     Email Us
                   </div>
                   <a
-                    href="mailto:info@qubitedge.com"
+                    href="mailto:qubitedge@gmail.com"
                     className="text-accent hover:underline"
                   >
-                    info@qubitedge.com
+                    qubitedge@gmail.com
                   </a>
                 </div>
               </div>

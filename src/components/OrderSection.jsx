@@ -27,6 +27,7 @@ export const OrderSection = () => {
     description: "",
     credentials: "",
     requirements: "",
+    attachment: null,
   });
 
   useEffect(() => {
@@ -88,6 +89,7 @@ export const OrderSection = () => {
           description: formData.description,
           credentials: formData.credentials,
           requirements: formData.requirements,
+          attachment: formData.attachment ? formData.attachment.name : "",
           time: new Date().toLocaleString(),
         },
         publicKey,
@@ -224,6 +226,81 @@ export const OrderSection = () => {
                     value={formData.requirements}
                     onChange={handleChange}
                   />
+                </div>
+
+                <div className="space-y-2">
+                  <Label
+                    htmlFor="attachment"
+                    className="font-medium text-base flex items-center gap-1"
+                  >
+                    Attach a File{" "}
+                    <span className="text-muted-foreground text-xs font-normal">
+                      (optional)
+                    </span>
+                  </Label>
+                  <label
+                    htmlFor="attachment"
+                    className="
+      flex flex-col items-center justify-center
+      w-full h-32 px-4 py-6
+      border-2 border-dashed border-accent rounded-lg
+      cursor-pointer bg-primary-foreground/5
+      transition-colors duration-200
+      hover:bg-accent/10 hover:border-accent
+      text-muted-foreground text-sm
+      "
+                    style={{ minHeight: "7rem" }}
+                  >
+                    <svg
+                      aria-hidden="true"
+                      width="32"
+                      height="32"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      className="mb-2 text-accent"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M12 16V4m0 0l-4 4m4-4l4 4" />
+                      <rect x="4" y="16" width="16" height="4" rx="2" />
+                    </svg>
+                    {formData.attachment ? (
+                      <span className="text-accent">
+                        {formData.attachment.name}
+                      </span>
+                    ) : (
+                      <>Click or drag a file here to upload</>
+                    )}
+                    <Input
+                      id="attachment"
+                      name="attachment"
+                      type="file"
+                      className="hidden"
+                      onChange={(e) =>
+                        setFormData({
+                          ...formData,
+                          attachment: e.target.files[0],
+                        })
+                      }
+                      accept=".pdf,.doc,.docx,.jpg,.png,.jpeg"
+                    />
+                  </label>
+                  {formData.attachment && (
+                    <div className="mt-2 flex items-center gap-4">
+                      <span className="text-sm text-accent">
+                        {formData.attachment.name}
+                      </span>
+                      <button
+                        type="button"
+                        onClick={() =>
+                          setFormData({ ...formData, attachment: null })
+                        }
+                        className="text-xs text-destructive hover:underline"
+                      >
+                        Remove
+                      </button>
+                    </div>
+                  )}
                 </div>
                 <Button
                   type="submit"

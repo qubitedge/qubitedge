@@ -6,7 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Card, CardContent } from "@/components/ui/card";
-import { Mail, MapPin, Phone, Send, Star, Quote } from "lucide-react";
+import { Mail, MapPin, Phone, Send, Star, Quote, Building } from "lucide-react";
 import emailjs from "@emailjs/browser";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -183,6 +183,22 @@ export const ContactSection = () => {
                     className="text-accent hover:underline"
                   >
                     qubitedge@gmail.com
+                  </a>
+                </div>
+              </div>
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                  <Building className="w-5 h-5 text-primary" />
+                </div>
+                <div>
+                  <div className="font-semibold text-foreground mb-1">
+                    qubitedge
+                  </div>
+                  <a
+                    href="tel:+916302829618"
+                    className="text-muted-foreground hover:text-foreground transition-colors"
+                  >
+                    +91 6302829618
                   </a>
                 </div>
               </div>

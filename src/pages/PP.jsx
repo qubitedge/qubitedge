@@ -60,10 +60,10 @@ const PP = () => {
           <li>
             Contact us with privacy concerns at{" "}
             <a
-              href="mailto:info@qubitedge.com"
+              href="mailto:qubitedge@gmail.com"
               className="text-accent hover:underline font-semibold"
             >
-              info@qubitedge.com
+              qubitedge@gmail.com
             </a>
             .
           </li>

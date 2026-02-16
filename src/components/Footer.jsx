@@ -1,4 +1,4 @@
-import { Facebook, Twitter, Linkedin, Youtube } from "lucide-react";
+import { Linkedin } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const footerLinks = {
@@ -20,13 +20,6 @@ const footerLinks = {
   ],
 };
 
-const socialLinks = [
-  { name: "Facebook", icon: Facebook, href: "#" },
-  { name: "Twitter", icon: Twitter, href: "#" },
-  { name: "LinkedIn", icon: Linkedin, href: "#" },
-  { name: "YouTube", icon: Youtube, href: "#" },
-];
-
 export const Footer = () => {
   const scrollToSection = (href) => {
     if (href.startsWith("#")) {
@@ -41,10 +34,10 @@ export const Footer = () => {
     <footer className="bg-primary text-primary-foreground">
       <div className="container-industrial py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
-          <div className="lg:col-span-2">
+          <div className="lg:col-span-2 flex flex-col items-center md:items-start">
             <a
               href="#"
-              className="font-serif text-2xl font-bold mb-4 block"
+              className="font-serif text-2xl font-bold mb-4 block font-sans font-semibold"
               onClick={(e) => {
                 e.preventDefault();
                 window.scrollTo({ top: 0, behavior: "smooth" });
@@ -52,22 +45,27 @@ export const Footer = () => {
             >
               qubitedge<span className="text-accent">.</span>
             </a>
-            <p className="text-primary-foreground/80 leading-relaxed mb-6 max-w-sm">
+            <p className="text-primary-foreground/80 leading-relaxed mb-6 max-w-sm text-center md:text-left">
               Precision engineering and manufacturing solutions for your most
               demanding projects. qubitedge is your trusted partner for quality
               and consistency.
             </p>
-            <div className="flex gap-4">
-              {socialLinks.map((social) => (
-                <a
-                  key={social.name}
-                  href={social.href}
-                  className="w-10 h-10 rounded-lg bg-primary-foreground/10 flex items-center justify-center hover:bg-primary-foreground/20 transition-colors"
-                  aria-label={social.name}
-                >
-                  <social.icon className="w-5 h-5" />
-                </a>
-              ))}
+            <div className="flex justify-center md:justify-start">
+              <a
+                href="https://linkedin.com/company/qubitedge.in"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 w-fit px-4 py-2 rounded-full
+                  bg-primary-foreground/10 hover:bg-primary-foreground/20
+                  transition-colors group border-2 border-transparent
+                  hover:border-accent"
+                aria-label="Connect with us on LinkedIn"
+              >
+                <Linkedin className="w-6 h-6 text-accent group-hover:scale-110 transition-transform duration-200" />
+                <span className="hidden md:inline text-primary-foreground/80 font-medium group-hover:text-accent transition-colors">
+                  Connect on LinkedIn
+                </span>
+              </a>
             </div>
           </div>
           <div>
@@ -127,7 +125,6 @@ export const Footer = () => {
             >
               Privacy Policy
             </Link>
-
             <Link
               to="/terms-of-service"
               className="hover:text-primary-foreground transition-colors"

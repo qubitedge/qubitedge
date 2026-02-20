@@ -235,7 +235,7 @@ export const OrderSection = () => {
                   >
                     Attach a File{" "}
                     <span className="text-muted-foreground text-xs font-normal">
-                      (optional)
+                      (.pdf,.docx,.jpg,.png,.step,.iges)
                     </span>
                   </Label>
                   <label
@@ -282,7 +282,7 @@ export const OrderSection = () => {
                           attachment: e.target.files[0],
                         })
                       }
-                      accept=".pdf,.doc,.docx,.jpg,.png,.jpeg"
+                      accept=".pdf,.doc,.docx,.jpg,.png,.jpeg,.step,.stp,.iges,.igs"
                     />
                   </label>
                   {formData.attachment && (
